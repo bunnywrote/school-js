@@ -23,5 +23,15 @@ function convertToMorse(str){
     return result;
 }
 
+function convertToMorse2(str){
+    var result = "";    
+    var charArr = str.split('').forEach(function(item, index){
+        result += charToMorseCode(item);
+    });
+
+    return result;
+}
+
 console.log(alphabetString.split(";"));
 console.log(convertToMorse("sos"));
+console.log(convertToMorse2("sos"));
