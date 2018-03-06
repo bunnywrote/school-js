@@ -11,6 +11,12 @@ function Font(name, chars){
 
     this.name = name;
     this.alphabet = alphabet;
+
+    /**
+     * chars.forEach(() => {
+     *  this.a;phabet[item.value] = item;
+     * }, this) <- 'this' ist erforderlich
+     */
 }
 
 Font.prototype.render = function(text){
@@ -18,8 +24,8 @@ Font.prototype.render = function(text){
 }
 
 Font.prototype.write = function(text, to){
-
-    if(to == null || to == undefined) console.log(text);
+    to = to || console.log
+    //if(to == null || to == undefined) console.log(text);
     to(text);
 }
 
